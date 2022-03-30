@@ -23,3 +23,15 @@ test("peek stack should return last inserted item", () => {
 
     expect(stack.peek()).toEqual('B');
 })
+
+test("isEmpty() must return true if stack has no item", () => {
+    const stack = new MyStack();
+    expect(stack.isEmpty()).toEqual(true);
+})
+
+test("isEmpty() must return false if stack has an item", () => {
+    const stack = new MyStack();
+    stack.push('A');
+
+    expect(stack.isEmpty()).toEqual(false);
+})
